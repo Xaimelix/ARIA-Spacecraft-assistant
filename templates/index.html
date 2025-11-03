@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+  <h1>Бортовой помощник (RAG)</h1>
+  <p>
+    Система Retrieval-Augmented Generation для экипажа космического корабля:
+    загружайте регламенты и отчёты, задавайте вопросы, получайте ответы с
+    ссылкой на источник.
+  </p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="{{ url_for('upload_page') }}">Обновить базу знаний</a>
+    <a class="btn" href="{{ url_for('chat_page') }}">Открыть чат</a>
+  </div>
+</section>
+
+<section class="features-grid">
+  <article class="card">
+    <h3>RAG</h3>
+    <p>Извлечение релевантных фрагментов из базы знаний и генерация ответа.</p>
+  </article>
+  <article class="card">
+    <h3>Обновления</h3>
+    <p>Загружайте PDF или TXT — знание попадает в FAISS-векторное хранилище.</p>
+  </article>
+  <article class="card">
+    <h3>Прозрачность</h3>
+    <p>В ответах отображаются отрывки источников, чтобы вы могли проверить факты.</p>
+  </article>
+</section>
+{% endblock %}
+
+

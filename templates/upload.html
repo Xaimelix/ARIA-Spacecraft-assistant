@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Загрузка документов</h2>
+<p>Поддерживаются форматы: PDF и TXT. Файл будет добавлен в базу знаний.</p>
+
+<form id="upload-form" class="upload-form">
+  <label class="field">
+    <span>Документ</span>
+    <input type="file" name="file" accept=".pdf,.txt" required />
+  </label>
+  <label class="field">
+    <span>Логический идентификатор (опционально)</span>
+    <input type="text" name="doc_id" placeholder="например: flight_ops_v1" />
+  </label>
+  <button class="btn btn-primary" type="submit">Загрузить</button>
+</form>
+
+<pre id="upload-result" class="result"></pre>
+{% endblock %}
+
+

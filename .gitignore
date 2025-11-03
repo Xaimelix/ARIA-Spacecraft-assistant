@@ -1,0 +1,5 @@
+uploads/
+.env
+rag_store/
+__pycache__/
+venv/
